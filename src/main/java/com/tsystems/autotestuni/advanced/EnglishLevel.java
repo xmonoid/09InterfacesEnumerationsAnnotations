@@ -1,7 +1,5 @@
 package com.tsystems.autotestuni.advanced;
 
-import java.util.Arrays;
-
 /**
  * Given:
  * - enum {@link EnglishLevel}
@@ -46,12 +44,6 @@ public enum EnglishLevel implements IDescription {
     @Override
     public String getDescription() {
         return description;
-    }
-
-    public static EnglishLevel valueByDescription(String description) {
-        return Arrays.stream(values())
-                .filter( level -> level.description.equals(description) )
-                .findFirst().orElse(null);
     }
 
     public static EnglishLevel[] nextLevels(EnglishLevel currentLevel) {
