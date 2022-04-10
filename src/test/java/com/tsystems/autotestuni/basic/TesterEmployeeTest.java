@@ -16,6 +16,11 @@ class TesterEmployeeTest {
     @Test
     void toNewPosition() {
         final var testerEmployee = new TesterEmployee();
+
+        Object o = testerEmployee;
+        assertTrue(o instanceof QualificationGrowth,
+                "Class TesterEmployee should implement interface QualificationGrowth");
+
         assertEquals(Position.JUNIOR, testerEmployee.getCurrentPosition(),
                 "Field currentPosition should have a default value Position.JUNIOR");
         testerEmployee.toNewPosition();
